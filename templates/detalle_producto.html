@@ -33,38 +33,14 @@
         <![endif]-->
         <!-- header start -->
         <div class="wrapper">
-            <!-- Newsletter Popup Start -->
-            <div class="popup_wrapper hidden-sm hidden-xs">
-                <div class="test">
-                    <span class="popup_off">Close</span>
-                    <div class="subscribe_area text-center">
-                        <h2>Newsletter</h2>
-                        <p>Subscribe to the Neha mailing list to receive updates on new arrivals, special offers and other discount information.</p>
-                        <div id="mc_embed_signup" class="subscribe-bottom">
-                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                    <input type="email" value="" name="EMAIL" class="email" placeholder="Enter your email address" required>
-                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                    <div class="clear-2"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="subscribe-bottom mt-15">
-                            <input type="checkbox" id="newsletter-permission">
-                            <label for="newsletter-permission">Don't show this popup again</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Newsletter Popup End -->
+            
             <header class="pl-155 pr-155 intelligent-header">
                 <div class="header-area header-area-2">
                     <div class="container-fluid p-0">
                         <div class="row no-gutters">
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
+                                    <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 menu-none-block menu-center">
@@ -310,8 +286,8 @@
                     <div class="breadcrumb-content-2">
                         <ul>
                             <li><a class="active" href="#">home</a></li>
-                            <li><a class="active" href="#">Shop </a></li>
-                            <li>Product Name</li>
+                            <li><a class="active" href="#">{{ product.collection_center_id }} </a></li>
+                            <li>{{ product.name }}</li>
                         </ul>
                     </div>
                 </div>
@@ -333,90 +309,23 @@
                                     <div class="product-details-large tab-content">
                                         <div class="tab-pane active show fade" id="pro-details1" role="tabpanel">
                                             <div class="easyzoom easyzoom--overlay">
-                                                <a href="{% static 'assets/img/product-details/bl1.jpg' %}">
-                                                    <img src="{% static 'assets/img/product-details/l1.jpg' %}" alt="">
+                                                <a >
+                                                    <img src="{{ product.image }}" alt="">
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="pro-details2" role="tabpanel">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{% static 'assets/img/product-details/bl2.jpg' %}">
-                                                    <img src="{% static 'assets/img/product-details/l2.jpg' %}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="pro-details3" role="tabpanel">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{% static 'assets/img/product-details/bl3.jpg' %}">
-                                                    <img src="{% static 'assets/img/product-details/l3.jpg' %}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="pro-details4" role="tabpanel">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{% static 'assets/img/product-details/bl4.jpg' %}">
-                                                    <img src="{% static 'assets/img/product-details/l4.jpg' %}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-details-small nav mt-12 main-product-details" role=tablist>
-                                        <a class="active mr-12" href="#pro-details1" data-toggle="tab" role="tab" aria-selected="true">
-                                            <img src="{% static 'assets/img/product-details/s1.jpg' %}" alt="">
-                                        </a>
-                                        <a class="mr-12" href="#pro-details2" data-toggle="tab" role="tab" aria-selected="true">
-                                            <img src="{% static 'assets/img/product-details/s2.jpg' %}" alt="">
-                                        </a>
-                                        <a class="mr-12" href="#pro-details3" data-toggle="tab" role="tab" aria-selected="true">
-                                            <img src="{% static 'assets/img/product-details/s3.jpg' %}" alt="">
-                                        </a>
-                                        <a class="mr-12" href="#pro-details4" data-toggle="tab" role="tab" aria-selected="true">
-                                            <img src="{% static 'assets/img/product-details/s4.jpg' %}" alt="">
-                                        </a>
-                                    </div>
+                                        
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-5 col-12">
                             <div class="product-details-content">
-                                <h3>Handcrafted Supper Mug</h3>
-                                <div class="rating-number">
-                                    <div class="quick-view-rating">
-                                        <i class="ion-ios-star red-star"></i>
-                                        <i class="ion-ios-star red-star"></i>
-                                        <i class="ion-android-star-outline"></i>
-                                        <i class="ion-android-star-outline"></i>
-                                        <i class="ion-android-star-outline"></i>
-                                    </div>
-                                    <div class="quick-view-number">
-                                        <span>2 Ratting (S)</span>
-                                    </div>
-                                </div>
+                                <h3>{{ product.name }}</h3>                                
                                 <div class="details-price">
-                                    <span>$120.00</span>
+                                    <span>${{ product.price }} </span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmol tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim veni quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-                                <div class="quick-view-select">
-                                    <div class="select-option-part">
-                                        <label>Size*</label>
-                                        <select class="select">
-                                            <option value="">- Please Select -</option>
-                                            <option value="">xl</option>
-                                            <option value="">ml</option>
-                                            <option value="">m</option>
-                                            <option value="">sl</option>
-                                        </select>
-                                    </div>
-                                    <div class="select-option-part">
-                                        <label>Color*</label>
-                                        <select class="select">
-                                            <option value="">- Please Select -</option>
-                                            <option value="">orange</option>
-                                            <option value="">pink</option>
-                                            <option value="">yellow</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                <p>{{ product.description }}</p>                                
                                 <div class="quickview-plus-minus">
                                     <div class="cart-plus-minus">
                                         <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
@@ -649,7 +558,7 @@
                             <div class="footer-widget">
                                 <div class="footer-widget-m-content text-center">
                                     <div class="footer-logo">
-                                        <a href="#"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                                        <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                                     </div>
                                     <div class="footer-nav">
                                         <nav>

@@ -27,38 +27,14 @@
     <body>
         <!-- header start -->
         <div class="wrapper">
-            <!-- Newsletter Popup Start -->
-            <div class="popup_wrapper hidden-sm hidden-xs">
-                <div class="test">
-                    <span class="popup_off">Close</span>
-                    <div class="subscribe_area text-center">
-                        <h2>Newsletter</h2>
-                        <p>Subscribe to the Neha mailing list to receive updates on new arrivals, special offers and other discount information.</p>
-                        <div id="mc_embed_signup" class="subscribe-bottom">
-                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                    <input type="email" value="" name="EMAIL" class="email" placeholder="Enter your email address" required>
-                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                    <div class="clear-2"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="subscribe-bottom mt-15">
-                            <input type="checkbox" id="newsletter-permission">
-                            <label for="newsletter-permission">Don't show this popup again</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Newsletter Popup End -->
+            
             <header>
                 <div class="header-area header-area-padding">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-6">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
+                                    <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-6">
@@ -213,17 +189,17 @@
             </div>
             <div class="slider-area">
                 <div class="slider-active owl-carousel">
-                    <div class="single-slider single-slider-hm1 bg-img ptb-260" style="background-image: url({% static 'assets/img/slider/1.jpg' %})">
+                    <div class="single-slider single-slider-hm1 bg-img ptb-260" style="background-image: url({% static 'assets/img/slider/slider1.jpg' %})">
                         <div class="container">
                             <div class="slider-content slider-content-style-1 slider-animated-1">
-                                <h3 class="animated">New Collection <span>2018.</span></h3>
-                                <h2 class="animated">Amazing Product</h2>
-                                <p class="animated">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor incididunt ut labore et dolore </p>
+                                <h3 class="animated">New Collection <span style="color:#fff;">2018.</span></h3>
+                                <h2 class="animated" style="color:#fff;">Amazing Product</h2>
+                                {% comment %} <p class="animated">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor incididunt ut labore et dolore </p> {% endcomment %}
                                 <a class="btn-hover slider-btn-style animated" href="shop-grid-view-sidebar.html">shop now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="single-slider single-slider-hm1 bg-img slider-content-style-1 ptb-260" style="background-image: url({% static 'assets/img/slider/8.jpg' %})">
+                    <div class="single-slider single-slider-hm1 bg-img slider-content-style-1 ptb-260" style="background-image: url({% static 'assets/img/slider/slider1.jpg' %})">
                         <div class="container">
                             <div class="slider-content slider-content-style-1 slider-animated-2 slider-text-right">
                                 <h3 class="animated">New Fashion <span>2018.</span></h3>
@@ -236,13 +212,15 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            
             <div class="banner-area pt-100 pb-70">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-3 col-12">
                             <div class="single-banner mb-30">
-                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/1.jpg' %}" alt=""></a>
+                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/1baner.jpg' %}" alt=""></a>
                                 <div class="banner-content banner-content-position1">
                                     <h3>morden <span>sofa</span></h3>
                                     <p>Sale up to <span>30% off</span> all product in the new collection</p>
@@ -251,7 +229,7 @@
                         </div>
                         <div class="d-sm-none d-lg-block col-lg-6 col-12">
                             <div class="single-banner mb-30">
-                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/2.jpg' %}" alt=""></a>
+                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/baner2.jpg' %}" alt=""></a>
                                 <div class="banner-content banner-content-position2">
                                     <span>Summer Sale</span>
                                     <h3>morden <span>chair</span></h3>
@@ -261,7 +239,7 @@
                         </div>
                         <div class="col-md-6 col-lg-3 col-12">
                             <div class="single-banner mb-30">
-                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/3.jpg' %}" alt=""></a>
+                                <a href="shop-grid-view-sidebar.html"><img src="{% static 'assets/img/banner/baner3.jpg' %}" alt=""></a>
                                 <div class="banner-content banner-content-position3">
                                     <h3>morden <span>chair</span></h3>
                                     <p>Sale up to <span>30% off</span> all product in the new collection</p>
@@ -299,7 +277,7 @@
                                         <div class="col-md-3 col-lg-3 col-sm-4">
                                             <div class="single-product">
                                                 <div class="product-img">
-                                                    <a href="#"><img src="{% static 'assets/img/product/1.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="https://media.istockphoto.com/photos/aluminum-crutches-picture-id522152309?k=6&m=522152309&s=612x612&w=0&h=Z1lEk8AWt-PNbwtcYeZmxgAdTSU01FEIkiTlC14iP60=" alt=""></a>
                                                     <span>sale</span>
                                                     <div class="product-action">
                                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
@@ -329,7 +307,7 @@
                                         <div class="col-md-3 col-lg-3 col-sm-4">
                                             <div class="single-product">
                                                 <div class="product-img">
-                                                    <a href="#"><img src="{% static 'assets/img/product/2.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="https://media.istockphoto.com/photos/aluminum-crutches-picture-id522152309?k=6&m=522152309&s=612x612&w=0&h=Z1lEk8AWt-PNbwtcYeZmxgAdTSU01FEIkiTlC14iP60=" alt=""></a>
                                                     <div class="product-action">
                                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
                                                         <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
@@ -358,7 +336,7 @@
                                         <div class="col-md-3 col-lg-3 col-sm-4">
                                             <div class="single-product">
                                                 <div class="product-img">
-                                                    <a href="#"><img src="{% static 'assets/img/product/3.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="https://media.istockphoto.com/photos/aluminum-crutches-picture-id522152309?k=6&m=522152309&s=612x612&w=0&h=Z1lEk8AWt-PNbwtcYeZmxgAdTSU01FEIkiTlC14iP60=" alt=""></a>
                                                     <span>sale</span>
                                                     <div class="product-action">
                                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
@@ -388,7 +366,7 @@
                                         <div class="col-md-3 col-lg-3 col-sm-4">
                                             <div class="single-product">
                                                 <div class="product-img">
-                                                    <a href="#"><img src="{% static 'assets/img/product/4.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="https://media.istockphoto.com/photos/aluminum-crutches-picture-id522152309?k=6&m=522152309&s=612x612&w=0&h=Z1lEk8AWt-PNbwtcYeZmxgAdTSU01FEIkiTlC14iP60=" alt=""></a>
                                                     <div class="product-action">
                                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
                                                         <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
@@ -423,7 +401,7 @@
                                         <div class="col-md-3 col-lg-3 col-sm-4">
                                             <div class="single-product">
                                                 <div class="product-img">
-                                                    <a href="#"><img src="{% static 'assets/img/product/5.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="https://media.istockphoto.com/photos/aluminum-crutches-picture-id522152309?k=6&m=522152309&s=612x612&w=0&h=Z1lEk8AWt-PNbwtcYeZmxgAdTSU01FEIkiTlC14iP60=" alt=""></a>
                                                     <span>sale</span>
                                                     <div class="product-action">
                                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
@@ -793,7 +771,7 @@
                     </div>
                 </div>
             </div>
-            <div class="shop-limited-area bg-img pt-90 pb-100" style="background-image: url({% static 'assets/img/banner/4.jpg' %})" data-overlay="3">
+            <div class="shop-limited-area bg-img pt-90 pb-100" style="background-image: url(https://info7rm.blob.core.windows.net.optimalcdn.com/images/2017/09/20/rayados.jpg)" data-overlay="3">
                 <div class="container">
                     <div class="shop-limited-content text-center">
                         <h2>Shop Limited Edition.</h2>
@@ -804,15 +782,17 @@
             <div class="product-collection-area pt-100 pb-50">
                 <div class="container">
                     <div class="section-title text-center mb-55">
-                        <h2>New Collection</h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when look</p>
+                        <h2>Nuevas Medicinas</h2>
+                        <p>{{ q }}</p>
                     </div>
                     <div class="row">
+                        {% for product in products %}
+
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="single-product mb-35">
                                 <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/5.jpg' %}" alt=""></a>
-                                    <span>sale</span>
+                                    <a href="{% url 'detail_product' product_id=product.id %}"><img src="{{ product.image }}" alt=""></a>
+                                    <span class="badge badge-primary">Usado</span>
                                     <div class="product-action">
                                         <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
                                         <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
@@ -821,246 +801,44 @@
                                 <div class="product-content">
                                     <div class="product-title-price">
                                         <div class="product-title">
-                                            <h4><a href="product-details-6.html">WOODEN FURNITURE</a></h4>
+                                            <h4><a href="{% url 'detail_product' product_id=product.id %}">{{ product.name }}</a></h4>
                                         </div>
                                         <div class="product-price">
-                                            <span>$110.00</span>
+                                            <span>$ {{ product.price }}</span>
                                         </div>
                                     </div>
                                     <div class="product-cart-categori">
                                         <div class="product-cart">
-                                            <span>Furniter</span>
+                                            <span>{{ product.category_id }}</span>
                                         </div>
                                         <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
+                                            <a href="#"><i class="ion-bag"></i> Agregar</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/6.jpg' %}" alt=""></a>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">WOODEN FURNITURE</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$120.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/7.jpg' %}" alt=""></a>
-                                    <span>sale</span>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">HANDCRAFTED MUG</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$130.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/8.jpg' %}" alt=""></a>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">HANDCRAFTED MUG</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$140.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/9.jpg' %}" alt=""></a>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">HANDCRAFTED MUG</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$150.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/10.jpg' %}" alt=""></a>
-                                    <span>sale</span>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">WOODEN FURNITURE</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$160.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/11.jpg' %}" alt=""></a>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">WOODEN FURNITURE</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$170.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="single-product mb-35">
-                                <div class="product-img">
-                                    <a href="#"><img src="{% static 'assets/img/product/12.jpg' %}" alt=""></a>
-                                    <span>sale</span>
-                                    <div class="product-action">
-                                        <a title="Wishlist" class="animate-left" href="#"><i class="ion-ios-heart-outline"></i></a>
-                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal" class="animate-right" href="#"><i class="ion-ios-eye-outline"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title-price">
-                                        <div class="product-title">
-                                            <h4><a href="product-details-6.html">WOODEN FURNITURE</a></h4>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>$180.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-cart-categori">
-                                        <div class="product-cart">
-                                            <span>Furniter</span>
-                                        </div>
-                                        <div class="product-categori">
-                                            <a href="#"><i class="ion-bag"></i> Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        {% endfor %}
+                        
                     </div>
                 </div>
             </div>
             <div class="blog-area pb-65">
                 <div class="container">
                     <div class="section-title text-center mb-55">
-                        <h2> Top Stories</h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when look</p>
+                        <h2> Mejores Centros de Acopio</h2>                        
                     </div>
                     <div class="row">
+                        {% for c_c in collection_centers %}
                         <div class="col-lg-4 col-md-6">
                             <div class="single-blog mb-30">
                                 <div class="blog-img">
-                                    <a href="#"><img src="{% static 'assets/img/blog/1.jpg' %}" alt=""></a>
+                                    <a href="#"><img class="mw-100 mh-100" style="width:300px;" src="{{ c_c.image }}" alt=""></a>
                                 </div>
                                 <div class="blog-info">
-                                    <h3><a href="#">Standard blog post.</a></h3>
+                                    <h3><a href="#">{{ c_c.name }}</a></h3>
+                                    <!--
                                     <div class="blog-meta">
                                         <ul>
                                             <li>February 13</li>
@@ -1068,46 +846,12 @@
                                             <li><a href="#">4 comments</a></li>
                                         </ul>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, sectetur adipising elit, sed do eimod tempor incididunt ut labore.</p>
+                                    -->
+                                    <p>{{ c_c.description }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-blog mb-30">
-                                <div class="blog-img">
-                                    <a href="#"><img src="{% static 'assets/img/blog/2.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">But I must explain to you.</a></h3>
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li>February 13</li>
-                                            <li><a href="#">Momen Bhuiyan</a></li>
-                                            <li><a href="#">4 comments</a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, sectetur adipising elit, sed do eimod tempor incididunt ut labore.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-blog mb-30">
-                                <div class="blog-img">
-                                    <a href="#"><img src="{% static 'assets/img/blog/3.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="blog-info">
-                                    <h3><a href="#">Lorem ipsum dolor sit.</a></h3>
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li>February 13</li>
-                                            <li><a href="#">Momen Bhuiyan</a></li>
-                                            <li><a href="#">4 comments</a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, sectetur adipising elit, sed do eimod tempor incididunt ut labore.</p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}                        
                     </div>
                 </div>
             </div>
@@ -1131,7 +875,7 @@
                             <div class="footer-widget">
                                 <div class="footer-widget-m-content text-center">
                                     <div class="footer-logo">
-                                        <a href="#"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                                        <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                                     </div>
                                     <div class="footer-nav">
                                         <nav>
