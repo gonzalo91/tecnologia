@@ -1,0 +1,28 @@
+{
+  "name": "paradigmas",
+  "version": "1.0.0",
+  "description": "Clase",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "buildprod": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzalo91/tecnologia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzalo91/tecnologia/issues"
+  },
+  "homepage": "https://github.com/gonzalo91/tecnologia#readme"
+}

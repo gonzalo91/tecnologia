@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
+
 # Create your models here.
 
 
@@ -26,9 +28,14 @@ class ProductCategory(models.Model):
     
 
 class Product(models.Model):
+    STATUS = (
+        (0, _('Inactivo')),
+        (1, _('Activo') ),
+    )
+
     CONDITIONS = (
-        ('n', 'New'),
-        ('u', 'Used')
+        ('n', _('Nuevo')),
+        ('u', _('Usado'))
     )
 
     TYPES = (
@@ -48,10 +55,13 @@ class Product(models.Model):
     condition         = models.CharField(max_length=1, choices=CONDITIONS)
     stock             = models.PositiveIntegerField()
     created_at        = models.DateTimeField( auto_now=False, auto_now_add=True)
-    status            = models.PositiveSmallIntegerField()
+    status            = models.PositiveSmallIntegerField(choices=STATUS)
 
     def Name(self):
         return '{0} $ {1}'.format(self.name, self.price)
+
+    def statusText(self):
+        return self.STATUS[self.status][1]
 
     def __str__(self):
         return self.Name()
