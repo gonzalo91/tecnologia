@@ -26,7 +26,7 @@ urlpatterns = [
 
     path('administrador/', include('Apps.Admin.urls')),
 
-    
+    path('api/', include('paradigmas.urls_api')),
 
     path('django/', admin.site.urls),
 ]

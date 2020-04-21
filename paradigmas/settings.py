@@ -26,6 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_COOKIE_NAME = "XCSRF-TOKEN"
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Apps.Web',    
     'Apps.Admin',  
+    'Apps.Admin.Home',  
     'widget_tweaks',  
 ]
 

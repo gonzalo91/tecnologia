@@ -12,6 +12,7 @@ class CollectionCenter(models.Model):
     image             = models.CharField(max_length=255,default="")
     latitude          = models.CharField(max_length=60)
     longitude         = models.CharField(max_length=60)
+    times_visited     = models.PositiveSmallIntegerField()
     status            = models.PositiveSmallIntegerField()
 
     def __str__(self):
@@ -54,7 +55,7 @@ class Product(models.Model):
     type_product      = models.CharField(max_length=1, choices=TYPES)
     condition         = models.CharField(max_length=1, choices=CONDITIONS)
     stock             = models.PositiveIntegerField()
-    created_at        = models.DateTimeField( auto_now=False, auto_now_add=True)
+    created_at        = models.DateField( auto_now=False, auto_now_add=True)
     status            = models.PositiveSmallIntegerField(choices=STATUS)
 
     def Name(self):
@@ -68,14 +69,24 @@ class Product(models.Model):
 
 class Order(models.Model):    
     user              = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
+    collection_center = models.ForeignKey(CollectionCenter, null=False, blank=False, on_delete=models.CASCADE)
     status            = models.PositiveSmallIntegerField()
-    date_at           = models.DateTimeField( auto_now=False, auto_now_add=False)
+    date_at           = models.DateField( auto_now=False, auto_now_add=False)
     created_at        = models.DateTimeField( auto_now=False, auto_now_add=True)
+
+    def __str__(self):
+        return '{0} - date: {1}'.format(self.id, self.date_at)  
 
 class OrderDetail(models.Model):
     order   = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
+    name    = models.CharField(max_length=100)
+    donated = models.BooleanField(default=True)
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    price   = models.DecimalField( max_digits=9, decimal_places=2)
     qty     = models.PositiveIntegerField()
+
+    def __str__(self):
+        return 'Order: {0} - prd: {1} - price: {2} - qty : {3} - donated : {4}'.format(self.order, self.name, self.price, self.qty, self.donated)  
 
 class Slider(models.Model):
     name              = models.CharField(max_length=60)
